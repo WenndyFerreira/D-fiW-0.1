@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --defi-green: #4CAF50;
+  --defi-green-light: #81C784;
+  --defi-green-dark: #388E3C;
+  --defi-green-50: #E8F5E9;
+  --defi-green-100: #C8E6C9;
+  --defi-dark: #1A1A2E;
+  --defi-text: #4A4A5A;
+  --defi-text-light: #8A8A9A;
+  --defi-gray: #F8F9FB;
+  --defi-gray-100: #F0F2F5;
+  --defi-gray-200: #E4E7EC;
+  --defi-gray-mid: #9E9E9E;
+  --defi-yellow: #FFB300;
+  --defi-yellow-light: #FFF3E0;
+  --defi-red: #EF5350;
+  --defi-red-light: #FFEBEE;
+  --defi-blue: #42A5F5;
+  --defi-blue-light: #E3F2FD;
+  --defi-purple: #AB47BC;
+  --defi-orange: #FF7043;
+  --defi-white: #FFFFFF;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #E8EAED;
+  color: var(--defi-text);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  overscroll-behavior-y: none;
+}
+
+/* Safe area variables and mobile touch improvements */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+}
+
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* App container */
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--defi-white);
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (min-width: 1024px) {
+  .app-container {
+    max-width: 500px;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}

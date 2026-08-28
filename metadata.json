@@ -1,0 +1,8 @@
+{
+  "name": "Remix Défiw",
+  "description": "App Independente ",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
