@@ -1,89 +1,88 @@
-# DéfiW - Aplicativo de Desafios e Metas Pessoais
+# DéfiW - Aplicativo focado em Déficit Calórico
 
 Aplicativo moderno desenvolvido em **React 18 + Vite + TypeScript + Tailwind CSS** com animações suaves via **Framer Motion** e suporte a **PWA / App Store (via Capacitor)**.
 
 > 🎓 **Desenvolvido por:** Wenndy Ferreira  
+> 📆 **Data do desenvolvimento:** 25/08/2026  
+> ✅ **Utilidade:** Pública  
 > 📚 **Curso:** Análise e Desenvolvimento de Sistemas (ADS)  
-> 💡 **Finalidade:** Projeto acadêmico e de estudo prático em desenvolvimento de software moderno.
+> 💡 **Finalidade:** Projeto acadêmico e de estudo prático em desenvolvimento de software moderno  
 
 ---
 
-## 🚀 Como Rodar o Projeto no VS Code
+## 📂 Estrutura e Descrição dos Arquivos
 
-### 1. Pré-requisitos
-- Ter o **Node.js (versão 18 ou superior)** instalado ([Download Node.js](https://nodejs.org/)).
-- **Visual Studio Code** instalado ([Download VS Code](https://code.visualstudio.com/)).
+### ⚙️ Arquivos de Configuração na Raiz (Root)
+- `index.html`: Ponto de entrada da aplicação web. Contém viewport mobile, favicon e carrega o script principal (`/src/main.tsx`).
+- `package.json`: Dependências do projeto (React, Lucide Icons, Tailwind, Motion, etc.) e scripts de execução (`dev`, `build`, `lint`).
+- `vite.config.ts`: Configuração do empacotador Vite e Tailwind CSS.
+- `tsconfig.json`: Configurações do compilador TypeScript.
+- `netlify.toml`: Configuração de hospedagem na Netlify para redirecionamento SPA sem erro 404.
+- `metadata.json`: Metadados do projeto no ambiente Google AI Studio.
+- `.gitignore`: Pastas e arquivos ignorados pelo Git (`node_modules`, `dist`, etc.).
+- `.env.example`: Modelo de variáveis de ambiente.
+- `README.md`: Documento descritivo e instruções do projeto.
 
-### 2. Passo a Passo
-1. Extraia a pasta ZIP no seu computador.
-2. Abra o **Visual Studio Code**.
-3. Vá em **File (Arquivo) > Open Folder (Abrir Pasta)** e selecione a pasta do projeto.
-4. Abra o Terminal integrado no VS Code (`Ctrl + \`` ou `Terminal > Novo Terminal`).
-5. Execute os comandos:
-   ```bash
-   npm install
-   npm run dev
-   ```
-6. Acesse no navegador: `http://localhost:3000`
+### 🌐 Pasta `public/` (Arquivos Públicos e Estáticos)
+- `public/_redirects`: Regra de redirecionamento SPA para a Netlify.
+- `public/manifest.json`: Manifesto PWA para instalação como app no celular.
+- `public/favicon.ico` e `public/logo.png`: Ícones de identificação na aba do navegador.
+- `public/apple-touch-icon.png`: Ícone para dispositivos iOS/Apple.
 
----
+### 💻 Pasta `src/` (Código-Fonte Principal)
+- `src/main.tsx`: Inicializa o React e monta a aplicação no `#root`.
+- `src/App.tsx`: Controlador principal de estado, autenticação e navegação entre telas.
+- `src/types.ts`: Tipagens e interfaces TypeScript (Usuário, Refeições, Alimentos, etc.).
+- `src/index.css`: Importação do Tailwind CSS e estilos globais.
+- `src/vite-env.d.ts`: Declarações de tipos do Vite.
 
-## 📱 Como Publicar na Apple App Store (iOS)
+### 📱 Pasta `src/screens/` (Telas do Aplicativo)
+- `DashboardScreen.tsx`: Resumo diário de calorias consumidas, barras de macros, água e refeições do dia.
+- `LoginScreen.tsx`: Tela de autenticação com validações visuais.
+- `RegisterScreen.tsx`: Onboarding com cálculo de Taxa Metabólica Basal (TMB) e metas calóricas.
+- `FoodScreen.tsx`: Catálogo completo de alimentos com busca instantânea e filtros por categorias.
+- `AssistantScreen.tsx`: Chat interativo com a IA **Défi Robô** com suporte a texto e áudio.
+- `ProgressScreen.tsx`: Histórico de peso, gráficos calóricos e evolução corporal.
+- `ProfileScreen.tsx`: Gerenciamento de perfil, metas e preferências.
+- `TermsScreen.tsx`: Termos de Uso e Política de Privacidade.
 
-Para transformar esta aplicação React/Vite em um app nativo iOS para a **App Store**, utiliza-se o **Capacitor** (a ferramenta oficial padrão para web apps):
+### 🧩 Pasta `src/components/` (Componentes Reutilizáveis)
+- `Logo.tsx`: Componente com o monograma oficial "D" em alta definição.
+- `BottomNav.tsx`: Barra de navegação inferior estilo aplicativo mobile.
+- `MealAddModal.tsx`: Modal para registrar alimentos em cada refeição.
+- `FoodQuantityModal.tsx`: Modal de ajuste de porções (gramas, ml ou P/M/G).
+- `EditProfileModal.tsx`: Modal de edição de peso, altura e dados do usuário.
+- `AccountModals.tsx`: Modais de gerenciamento e encerramento de conta.
+- `AlertModal.tsx`: Modal de avisos e confirmações de ações.
+- `Toast.tsx`: Notificações flutuantes de feedback na tela.
 
-### Passo 1: Instalar o Capacitor no Projeto
-No terminal do projeto, execute:
-```bash
-npm install @capacitor/core @capacitor/cli @capacitor/ios
-npx cap init
-```
-*(Quando perguntado, defina o nome do app como `DéfiW` e o App ID como `com.defiw.app` ou seu domínio).*
+### 🧠 Pasta `src/utils/` (Funções Utilitárias e Lógica)
+- `storage.ts`: Persistência local no navegador (`localStorage`).
+- `nutrition.ts`: Fórmulas nutricionais (Harris-Benedict, balanço calórico e distribuição de macros).
+- `textFoodParser.ts`: Processamento de texto natural para reconhecimento automático de refeições.
+- `defiAssistantEngine.ts`: Motor de respostas inteligentes do Défi Robô.
 
-### Passo 2: Configurar o `capacitor.config.json`
-Certifique-se de que a pasta web (`webDir`) aponte para `dist`:
-```json
-{
-  "appId": "com.defiw.app",
-  "appName": "DéfiW",
-  "webDir": "dist",
-  "bundledWebRuntime": false
-}
-```
+### 🥗 Pasta `src/data/` (Banco de Dados de Alimentos)
+- `foodDbTypes.ts`: Estrutura de dados dos alimentos.
+- `portionFoodDB.ts`: Tabela com médias de porções usuais do dia a dia.
+- `src/data/foods/`: Base extensa categorizada (proteínas, carboidratos, vegetais, frutas, pratos típicos, veganos, bebidas, etc.).
 
-### Passo 3: Gerar a Build de Produção
-```bash
-npm run build
-```
-
-### Passo 4: Adicionar o iOS e Abrir no Xcode (Necessário Mac para compilar para App Store)
-```bash
-npx cap add ios
-npx cap copy
-npx cap open ios
-```
-
-### Passo 5: Publicação na App Store Connect
-1. No **Xcode**, selecione sua conta Apple Developer (Signing & Capabilities).
-2. Configure os ícones, splash screen e descrições.
-3. Clique em **Product > Archive** e envie para o **App Store Connect** / TestFlight.
-
----
-
-## 📂 Estrutura do Projeto
-
-- `/src/App.tsx` - Componente raiz e orquestrador principal do app.
-- `/src/screens/` - Telas do aplicativo (Desafios, Comunidade, Perfil, Ranking, etc.).
-- `/src/components/` - Componentes reutilizáveis (botões, cards, modais).
-- `/src/data/` - Base de dados local e desafios pré-cadastrados.
-- `/src/types.ts` - Tipagens e interfaces TypeScript.
-- `/public/` - Ícones, logotipos e manifesto PWA.
-- `/package.json` - Dependências e scripts do projeto.
+### 🖼️ Pasta `src/assets/images/` (Assets Visuais)
+- `defiw_pro_d_logo_*.jpg`: Logo oficial em alta definição.
+- `defi_bot_headshot_*.jpg`: Foto oficial do assistente Défi Robô.
 
 ---
 
 ## 🛠️ Scripts Disponíveis
 
-- `npm run dev`: Inicia o servidor de desenvolvimento local.
-- `npm run build`: Compila e otimiza o código para produção na pasta `/dist`.
-- `npm run lint`: Valida tipos e código TypeScript.
+```bash
+# Iniciar servidor local de desenvolvimento
+npm run dev
+
+# Gerar build de produção para deploy
+npm run build
+
+# Validação estática de tipos TypeScript
+npm run lint
+
+Obrigado
