@@ -19,23 +19,6 @@ import { MEATS_POULTRY_SEAFOOD_DATABASE } from './foods/meatsPoultrySeafood';
 import { TRADITIONAL_DISHES_DATABASE } from './foods/traditionalDishes';
 
 export * from './foodDbTypes';
-export { FRUITS_DATABASE } from './foods/fruits';
-export { PROTEINS_DATABASE } from './foods/proteins';
-export { VEGETARIAN_VEGAN_DATABASE } from './foods/vegetarianVegan';
-export { CARBS_GRAINS_DATABASE } from './foods/carbsGrains';
-export { VEGGIES_DATABASE } from './foods/veggies';
-export { DAIRY_DRINKS_OTHER_DATABASE } from './foods/dairyDrinksOther';
-export { ESFIHAS_SALGADOS_DATABASE } from './foods/esfihasSalgados';
-export { FAST_FOOD_PIZZAS_DATABASE } from './foods/fastFoodPizzas';
-export { PREPARED_MEALS_PASTAS_DATABASE } from './foods/preparedMealsPastas';
-export { VEGAN_MEAT_SUBSTITUTES_DATABASE } from './foods/veganMeatSubstitutes';
-export { VEGAN_DAIRY_EGGS_DATABASE } from './foods/veganDairyEggs';
-export { VEGAN_MEALS_SALGADOS_DATABASE } from './foods/veganMealsSalgados';
-export { VEGAN_NATURAL_PROTEINS_PRODUCE_DATABASE } from './foods/veganNaturalProteinsProduce';
-export { ALCOHOLIC_BEERS_WINES_SPIRITS_DATABASE } from './foods/alcoholicBeersWinesSpirits';
-export { ALCOHOLIC_DRINKS_LIQUEURS_OTHERS_DATABASE } from './foods/alcoholicDrinksLiqueursOthers';
-export { MEATS_POULTRY_SEAFOOD_DATABASE } from './foods/meatsPoultrySeafood';
-export { TRADITIONAL_DISHES_DATABASE } from './foods/traditionalDishes';
 
 // Unified 100% verified TACO/TBCA food database
 export const COMMON_FOOD_DATABASE: FoodWithPortions[] = [

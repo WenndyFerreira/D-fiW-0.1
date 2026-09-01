@@ -7,7 +7,8 @@ import {
   MealsState, 
   NutritionGoals, 
   ScreenType, 
-  UserProfile 
+  UserProfile,
+  SmartMealSuggestion
 } from './types';
 import { Storage } from './utils/storage';
 import { calculateCalculatedGoals } from './utils/nutrition';
@@ -24,7 +25,6 @@ import { Toast } from './components/Toast';
 import { MealAddModal } from './components/MealAddModal';
 import { EditProfileModal } from './components/EditProfileModal';
 import { LogoutModal, DeleteAccountModal } from './components/AccountModals';
-import { SmartMealSuggestion } from './types';
 
 const DEFAULT_USER: UserProfile = {
   name: '',
