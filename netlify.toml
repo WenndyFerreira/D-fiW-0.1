@@ -1,8 +1,16 @@
-### Netlify
+🌐 Aplicação Publicada
+
+O DéfiW está disponível publicamente para demonstração e testes através da plataforma Netlify.
+
+🚀 Deploy: Netlify
+🌐 Acesso: defiw.netlify.app
+📱 Compatibilidade: Desktop e dispositivos móveis
+
+A aplicação utiliza configuração de redirecionamento SPA (Single Page Application) para garantir o funcionamento correto da navegação e evitar erros 404 ao acessar rotas diretamente.
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-[Link](https://defiw.netlify.app)
+🎓 A aplicação foi desenvolvida para fins de estudo, pesquisa e aprimoramento prático durante a formação em Análise e Desenvolvimento de Sistemas (ADS).
