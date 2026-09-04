@@ -49,35 +49,35 @@ export const TermsScreen: React.FC<TermsScreenProps> = ({ onBack, onAccept }) =>
           <div>
             <h2 className="text-sm font-bold text-gray-900 mb-1">1. Autoria e Finalidade de Estudo</h2>
             <p>
-              O <strong>DéfiW</strong> foi idealizado e desenvolvido por <strong>Wenndy Ferreira</strong>, estudante do curso de <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>. O projeto foi concebido para fins exclusivamente de estudo, pesquisa e aprimoramento prático em engenharia de software e desenvolvimento de aplicações móveis modernas.
+              O <strong>DéfiW</strong> foi idealizado e desenvolvido por <strong>Wenndy Ferreira dos santos</strong>, estudante do curso de <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>. O projeto foi concebido para fins exclusivamente de estudo, pesquisa e aprimoramento prático em engenharia de software e desenvolvimento de aplicações móveis modernas;
             </p>
           </div>
 
           <div>
             <h2 className="text-sm font-bold text-gray-900 mb-1">2. Sobre o Aplicativo e Caráter Informativo</h2>
             <p>
-              O aplicativo atua como uma ferramenta digital de suporte à organização de rotinas saudáveis, permitindo o registro de refeições, ingestão de água, acompanhamento de metas e cálculo estimado de déficit calórico. <strong>O DéfiW possui caráter estritamente educativo e informativo</strong>, não substituindo consultas, prescrições, diagnósticos ou orientações fornecidas por profissionais habilitados de medicina, nutrição ou educação física.
+              O aplicativo atua como uma ferramenta digital de suporte à organização de rotinas saudáveis, permitindo o registro de refeições, ingestão de água, acompanhamento de metas e cálculo estimado de déficit calórico. <strong>O DéfiW possui caráter estritamente educativo e informativo</strong>, não substituindo consultas, prescrições, diagnósticos ou orientações fornecidas por profissionais habilitados de medicina, nutrição ou educação física;
             </p>
           </div>
 
           <div>
             <h2 className="text-sm font-bold text-gray-900 mb-1">3. Responsabilidade do Usuário</h2>
             <p>
-              O usuário é o único responsável pela veracidade dos dados informados e pela forma como gerencia suas refeições e hábitos. Dietas restritivas e planos de emagrecimento devem ser sempre orientados e acompanhados por nutricionistas ou médicos especializados.
+              O usuário é o único responsável pela veracidade dos dados informados e pela forma como gerencia suas refeições e hábitos. Dietas restritivas e planos de emagrecimento devem ser sempre orientados e acompanhados por nutricionistas ou médicos especializados;
             </p>
           </div>
 
           <div>
             <h2 className="text-sm font-bold text-gray-900 mb-1">4. Privacidade e Armazenamento dos Dados</h2>
             <p>
-              Os dados de perfil, histórico de refeições e registros diários são salvos de forma local e segura no próprio dispositivo do usuário, respeitando a privacidade e sendo utilizados unicamente para viabilizar as funcionalidades da aplicação.
+              Os dados de perfil, histórico de refeições e registros diários são salvos de forma local e segura no próprio dispositivo do usuário, respeitando a privacidade e sendo utilizados unicamente para viabilizar as funcionalidades da aplicação;
             </p>
           </div>
 
           <div>
             <h2 className="text-sm font-bold text-gray-900 mb-1">5. Aceitação e Compromisso</h2>
             <p>
-              Ao interagir com o DéfiW, você valoriza a iniciativa acadêmica e concorda em usufruir da ferramenta como um facilitador de organização diária em prol de uma vida mais ativa e equilibrada.
+              Ao interagir com o DéfiW, você valoriza a iniciativa acadêmica e concorda em usufruir da ferramenta como um facilitador de organização diária em prol de uma vida mais ativa e equilibrada;
             </p>
           </div>
         </section>

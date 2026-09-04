@@ -1,12 +1,12 @@
 # DéfiW - Aplicativo focado em Déficit Calórico
 
-Aplicativo moderno desenvolvido em **React 18 + Vite + TypeScript + Tailwind CSS** com animações suaves via **Framer Motion** e suporte a **PWA / App Store (via Capacitor)**.
+Aplicativo moderno desenvolvido em **React 18 + Vite + TypeScript + Tailwind CSS** com animações suaves via **Framer Motion** e suporte a **PWA / App Store (via Capacitor)**. O projeto foi concebido para fins exclusivamente de estudo, pesquisa e aprimoramento prático em engenharia de software e desenvolvimento de aplicações móveis modernas.
 
-> 🎓 **Desenvolvido por:** Wenndy Ferreira  
-> 📆 **Data do desenvolvimento:** 25/08/2026  
-> ✅ **Utilidade:** Pública  
-> 📚 **Curso:** Análise e Desenvolvimento de Sistemas (ADS)  
-> 💡 **Finalidade:** Projeto acadêmico e de estudo prático em desenvolvimento de software moderno  
+> 🎓 **Desenvolvido por:** Wenndy Ferreira;
+> 📆 **Data do desenvolvimento:** 25/08/2026;
+> ✅ **Utilidade:** Pública;
+> 📚 **Curso:** Análise e Desenvolvimento de Sistemas (ADS); 
+> 💡 **Finalidade:** Projeto acadêmico e de estudo prático em desenvolvimento de software moderno;
 
 ---
 
@@ -18,9 +18,7 @@ Aplicativo moderno desenvolvido em **React 18 + Vite + TypeScript + Tailwind CSS
 - `vite.config.ts`: Configuração do empacotador Vite e Tailwind CSS.
 - `tsconfig.json`: Configurações do compilador TypeScript.
 - `netlify.toml`: Configuração de hospedagem na Netlify para redirecionamento SPA sem erro 404.
-- `metadata.json`: Metadados do projeto no ambiente Google AI Studio.
 - `.gitignore`: Pastas e arquivos ignorados pelo Git (`node_modules`, `dist`, etc.).
-- `.env.example`: Modelo de variáveis de ambiente.
 - `README.md`: Documento descritivo e instruções do projeto.
 
 ### 🌐 Pasta `public/` (Arquivos Públicos e Estáticos)
